@@ -19,6 +19,7 @@ w = observation.get_weather()
 r = sr.Recognizer()
 m = sr.Microphone()
 
+str1 = 'weather'
 weatherstrs = ['weather']
 objectstrs = ['find']
 busstrs = ['bus']
@@ -40,9 +41,17 @@ def receiving(serial_port):
 def listening():
     with m as source: r.adjust_for_ambient_noise(source)
     while True:
+        print("Say something!")
         with m as source: audio = r.listen(source)
         try:
             recognizedvalue = r.recognize_google(audio)
+            print(u"You said {}".format(recognizedvalue).encode("utf-8"))
+            if recognizedvalue.find(str1) > -1:
+                temperature = w.get_temperature('fahrenheit')
+                print(temperature)
+                tts = gTTS(text=('The temperature is ' + str(temperature['temp']) + 'Fahrenheit'), lang='en')
+                tts.save('weather.mp3')
+                os.system('weather.mp3')
         except sr.UnknownValueError:
             pass
         except sr.RequestError as e:
