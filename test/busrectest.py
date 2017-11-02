@@ -2,6 +2,7 @@ import speech_recognition as sr
 import pyowm
 from gtts import gTTS
 import os
+import busreader
 
 owm = pyowm.OWM('bd5e378503939ddaee76f12ad7a97608')
 
@@ -12,8 +13,10 @@ w = observation.get_weather()
 r = sr.Recognizer()
 m = sr.Microphone()
 
-str1 = 'weather'
+b = busreader.BusData()
 
+str1 = 'weather'
+str2 = 'bus'
 
 try:
     print("A moment of silence, please...")
@@ -36,6 +39,23 @@ try:
                     tts = gTTS(text = ('The temperature is ' + str(temperature['temp']) + 'Fahrenheit'),lang = 'en')
                     tts.save('weather.mp3')
                     os.system('weather.mp3')
+                if value.find(str2) > -1:
+                    for busstopname in b.busstopnames:
+                        if value.lower().find(busstopname.lower())>-1:
+                            departures = b.getdeparturesbystopname(busstopname)['departures']
+                            text = ''
+                            count = 0
+                            for departure in departures:
+                                if(departure['expected_mins'] > 5 and count >= 3):
+                                    break
+                                text += departure['headsign']
+                                text += ' is arriving in '
+                                text += str(departure['expected_mins'])
+                                text += ' minutes. '
+                                count += 1
+                            tts = gTTS(text = text,lang = 'en')
+                            tts.save('bus.mp3')
+                            os.system('bus.mp3')
             else:  # this version of Python uses unicode for strings (Python 3+)
                 print("You said {}".format(value))
         except sr.UnknownValueError:
