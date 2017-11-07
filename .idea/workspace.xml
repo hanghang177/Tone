@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="44aa1910-09e9-40ce-8bb2-c705039e896e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/busreader.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/busrectest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/bus.mp3" afterPath="$PROJECT_DIR$/test/bus.mp3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/voicerectest.py" afterPath="$PROJECT_DIR$/test/voicerectest.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/busreader.py" afterPath="$PROJECT_DIR$/test/busreader.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,10 +18,10 @@
       <file leaf-file-name="busreader.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/busreader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="6" column="51" lean-forward="true" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+            <state relative-caret-position="2200">
+              <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
               <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -31,7 +30,7 @@
       <file leaf-file-name="busrectest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/busrectest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="1100">
               <caret line="48" column="78" lean-forward="false" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
@@ -43,8 +42,8 @@
       <file leaf-file-name="voicerectest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../smartdormcontroller/voicerectest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+            <state relative-caret-position="825">
+              <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -53,7 +52,7 @@
       <file leaf-file-name="voicerectest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/voicerectest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="537">
+            <state relative-caret-position="850">
               <caret line="37" column="44" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding />
             </state>
@@ -78,8 +77,8 @@
         <option value="$PROJECT_DIR$/Main.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/test/voicerectest.py" />
-        <option value="$PROJECT_DIR$/test/busreader.py" />
         <option value="$PROJECT_DIR$/test/busrectest.py" />
+        <option value="$PROJECT_DIR$/test/busreader.py" />
       </list>
     </option>
   </component>
@@ -243,7 +242,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11302083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32017544" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32017544" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -275,7 +274,43 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/busrectest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1100">
+          <caret line="48" column="78" lean-forward="false" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../smartdormcontroller/voicerectest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/voicerectest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="37" column="44" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/busreader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -335,15 +370,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../smartdormcontroller/voicerectest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="36" column="44" lean-forward="true" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
+        <state relative-caret-position="825">
+          <caret line="36" column="44" lean-forward="false" selection-start-line="36" selection-start-column="44" selection-end-line="36" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/voicerectest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
+        <state relative-caret-position="850">
           <caret line="37" column="44" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
@@ -351,7 +386,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/busrectest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="1100">
           <caret line="48" column="78" lean-forward="false" selection-start-line="48" selection-start-column="78" selection-end-line="48" selection-end-column="78" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
@@ -361,10 +396,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/busreader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="51" lean-forward="true" selection-start-line="6" selection-start-column="51" selection-end-line="6" selection-end-column="51" />
+        <state relative-caret-position="2200">
+          <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
