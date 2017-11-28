@@ -1,22 +1,23 @@
-import speech_recognition as sr
-import pyowm
-from gtts import gTTS
-import os
-import busreader
+import speech_recognition as sr #Python speech recognition
+import pyowm    #Open Weather Map API
+from gtts import gTTS   #Google Text To Speech
+import os   #Using the System's sound playback software
+import busreader    #Using the busreader Eric wrote
 
-owm = pyowm.OWM('bd5e378503939ddaee76f12ad7a97608')
+owm = pyowm.OWM('bd5e378503939ddaee76f12ad7a97608') #Eric's OWM API key
 
-observation = owm.weather_at_place('Urbana, IL')
+observation = owm.weather_at_place('Urbana, IL')    #Use Urbana IL data
 
-w = observation.get_weather()
+w = observation.get_weather()   #get weather information of Urbana
 
-r = sr.Recognizer()
-m = sr.Microphone()
+r = sr.Recognizer() #speech recognition's recognizer
+m = sr.Microphone() #
 
 b = busreader.BusData()
 
 str1 = 'weather'
 str2 = 'bus'
+str3 = 'find'
 
 try:
     print("A moment of silence, please...")
