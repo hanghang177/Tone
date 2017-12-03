@@ -15,9 +15,9 @@ import Adafruit_BluefruitLE
 #logging.basicConfig(level=logging.DEBUG)
 
 # Define service and characteristic UUIDs used by the UART service.
-UART_SERVICE_UUID = uuid.UUID('6E400001-B5A3-F393-E0A9-E50E24DCCA9E')
-TX_CHAR_UUID      = uuid.UUID('6E400002-B5A3-F393-E0A9-E50E24DCCA9E')
-RX_CHAR_UUID      = uuid.UUID('6E400003-B5A3-F393-E0A9-E50E24DCCA9E')
+UART_SERVICE_UUID = uuid.UUID('08F63DCF-3A3C-4E79-A387-EBA5C52B1D71')
+TX_CHAR_UUID      = uuid.UUID('6E400003-B5A3-F393-E0A9-E50E24DCCA9E')
+##RX_CHAR_UUID      = uuid.UUID('6E400003-B5A3-F393-E0A9-E50E24DCCA9E')408C791D-E27D-4AC7-BBC8-21DF50BEA119 # # #
 
 # Get the BLE provider for the current platform.
 ble = Adafruit_BluefruitLE.get_provider()
@@ -32,11 +32,14 @@ def main():
     # Clear any cached data because both bluez and CoreBluetooth have issues with
     # caching data and it going stale.
     ble.clear_cached_data()
+     #ble.disconnect_devices()
 
     # Get the first available BLE network adapter and make sure it's powered on.
     adapter = ble.get_default_adapter()
     adapter.power_on()
+    
     print('Using adapter: {0}'.format(adapter.name))
+
 
     # Scan for UART devices.
     print('Searching for UART device...')
@@ -62,16 +65,20 @@ def main():
         # service and characteristic UUID lists.  Will time out after 60 seconds
         # (specify timeout_sec parameter to override).
         print('Discovering services...')
-        device.discover([UART_SERVICE_UUID], [TX_CHAR_UUID, RX_CHAR_UUID])
+        device.discover([UART_SERVICE_UUID], [TX_CHAR_UUID])
 
         # Find the UART service and its characteristics.
         uart = device.find_service(UART_SERVICE_UUID)
-        rx = uart.find_characteristic(RX_CHAR_UUID)
+##        rx = uart.find_characteristic(RX_CHAR_UUID)
+        print(uart)
         tx = uart.find_characteristic(TX_CHAR_UUID)
 
         # Write a string to the TX characteristic.
+        print(tx)
+        t = tx.read_value()
+        print(t)
         print('Sending message to device...')
-        tx.write_value(10100000)
+        tx.write_value([255,255])
 
         # Function to receive RX characteristic changes.  Note that this will
         # be called on a different thread so be careful to make sure state that
@@ -81,15 +88,15 @@ def main():
             print('Received: {0}'.format(data))
 
         # Turn on notification of RX characteristics using the callback above.
-        print('Subscribing to RX characteristic changes...')
-        rx.start_notify(received)
+##        print('Subscribing to RX characteristic changes...')
+##        rx.start_notify(received)
 
         # Now just wait for 30 seconds to receive data.
         print('Waiting 60 seconds to receive data from the device...')
-        time.sleep(60)
+        time.sleep(6)
     finally:
         # Make sure device is disconnected on exit.
-        device.disconnect()
+        print('Tired of disconnecting')
 
 
 # Initialize the BLE system.  MUST be called before other BLE calls!
