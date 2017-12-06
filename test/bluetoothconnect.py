@@ -15,8 +15,8 @@ import Adafruit_BluefruitLE
 #logging.basicConfig(level=logging.DEBUG)
 
 # Define service and characteristic UUIDs used by the UART service.
-UART_SERVICE_UUID = uuid.UUID('08F63DCF-3A3C-4E79-A387-EBA5C52B1D71')
-TX_CHAR_UUID      = uuid.UUID('6E400003-B5A3-F393-E0A9-E50E24DCCA9E')
+UART_SERVICE_UUID = uuid.UUID('30303030-0000-1000-8000-00805F9B34FB')
+TX_CHAR_UUID      = uuid.UUID('408C791D-E27D-4AC7-BBC8-21DF50BEA119')
 ##RX_CHAR_UUID      = uuid.UUID('6E400003-B5A3-F393-E0A9-E50E24DCCA9E')408C791D-E27D-4AC7-BBC8-21DF50BEA119 # # #
 
 # Get the BLE provider for the current platform.
@@ -74,11 +74,8 @@ def main():
         tx = uart.find_characteristic(TX_CHAR_UUID)
 
         # Write a string to the TX characteristic.
-        print(tx)
-        t = tx.read_value()
-        print(t)
         print('Sending message to device...')
-        tx.write_value([255,255])
+        tx.write_value([0x31])
 
         # Function to receive RX characteristic changes.  Note that this will
         # be called on a different thread so be careful to make sure state that

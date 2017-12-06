@@ -1,12 +1,22 @@
+#import start
 import speech_recognition as sr #Python speech recognition
 from gtts import gTTS   #Google Text To Speech
 import os   #Using the System's sound playback software
 import busreader    #Using the busreader Eric wrote
+import uuid
+#import Adafruit_BluefruitLE
+#import end
 
+#speech recognition init
 r = sr.Recognizer() #speech recognition's recognizer
 m = sr.Microphone() #
+#speech recognition init end
 
+#
 b = busreader.BusData()
+
+UART_SERVICE_UUID = uuid.UUID('30303030-0000-1000-8000-00805F9B34FB')
+TX_CHAR_UUID      = uuid.UUID('408C791D-E27D-4AC7-BBC8-21DF50BEA119')
 
 str1 = 'weather'
 str2 = 'bus'
